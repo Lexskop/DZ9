@@ -3,3 +3,19 @@
 N = 5 -> "5, 4, 3, 2, 1"
 N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 */
+Console.WriteLine("Введите  N");
+int start = Convert.ToInt32(Console.ReadLine());
+Console.Write($"Ваше число {start} -> \"");
+
+printRange(start);
+
+void printRange(int max)
+{
+    if (max == 1)
+    {
+        return;
+    }
+    Console.Write($"{max}, ");
+    printRange(max - 1);
+}
+Console.Write("1\"");
